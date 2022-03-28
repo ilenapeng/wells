@@ -6,20 +6,16 @@ library(tigris)
 library(ggtext)
 
 ### Loading data
-# Abandoned and unplugged
-abandoned <- read_csv('https://raw.githubusercontent.com/ilenapeng/wells/main/data_raw/wells_abandoned.csv')
-# Abandoned and unplugged counts, by county & drop index column
-unplug_abdn <- read_csv('https://raw.githubusercontent.com/ilenapeng/wells/main/data_output/unplug_abdn.csv')
-unplug_abdn <- unplug_abdn[ -c(1) ]
+# Orphaned (unplugged)
+orphaned <- read_csv('https://raw.githubusercontent.com/ilenapeng/wells/main/data_3_25_22/data_raw_32522/wells_orphaned_32522.csv')
+# Orphaned, by county & drop index column
+unplug_orphaned <- read_csv('https://raw.githubusercontent.com/ilenapeng/wells/main/data_3_25_22/data_processed_32522/unplug_orphaned_32522.csv')
 # All active wells
-active <- read_csv('https://raw.githubusercontent.com/ilenapeng/wells/main/data_output/active_all.csv')
-active <- active[ -c(1) ]
+active <- read_csv('https://raw.githubusercontent.com/ilenapeng/wells/main/data_3_25_22/data_processed_32522/active_all_32522.csv')
 # Active well counts, by county & drop index column
-active_ct <- read_csv('https://raw.githubusercontent.com/ilenapeng/wells/main/data_output/active.csv')
-active_ct <- active_ct[ -c(1) ]
+active_ct <- read_csv('https://raw.githubusercontent.com/ilenapeng/wells/main/data_3_25_22/data_processed_32522/active_32522.csv')
 # Time between completed and plugged
-timespan <- read_csv('https://raw.githubusercontent.com/ilenapeng/wells/main/data_output/timespan.csv')
-timespan <- timespan[ -c(1) ]
+timespan <- read_csv('https://raw.githubusercontent.com/ilenapeng/wells/main/data_3_25_22/data_processed_32522/timespan_32522.csv')
 
 #Chart theme
 plot_theme <- theme(
@@ -36,23 +32,23 @@ plot_theme <- theme(
 
 ########### Map of abandoned and unplugged wells
 #Removing nulls now for plotting purposes - did not remove them in the counts because they were not marked as UM 
-abandoned <- abandoned %>% filter(!is.na(`SURFACE LONGITUDE`) & !is.na(`SURFACE LATITUDE`)) 
+orphaned <- orphaned %>% filter(!is.na(`SURFACE LONGITUDE`) & !is.na(`SURFACE LATITUDE`)) 
 active <- active %>% filter(!is.na(`Surface Longitude`) & !is.na(`Surface Latitude`)) 
 #Merging wells data and shapefile
 ny <- counties("New York", cb = TRUE)
-merge <- ny %>% full_join(unplug_abdn, by = c("NAME" = "county"))
+merge <- ny %>% full_join(unplug_orphaned, by = c("NAME" = "county"))
 
 p_abdn <-
   ggplot() +
   geom_sf(data=merge, fill="white", color="#DCDCDC") +
-  geom_point(data=active, aes(x=SurfaceLongitude, y=SurfaceLatitude), alpha=0.1, size=0.05, color="#999999") +
-  geom_point(data=abandoned, aes(x=`SURFACE LONGITUDE`, y=`SURFACE LATITUDE`), alpha=0.2, size=0.1, color="#E3655B") +
+  geom_point(data=active, aes(x=surfacelongitude, y=surfacelatitude), alpha=0.1, size=0.05, color="#999999") +
+  geom_point(data=orphaned, aes(x=`SURFACE LONGITUDE`, y=`SURFACE LATITUDE`), alpha=0.2, size=0.1, color="#E3655B") +
   annotate("text", x = -78.5, y = 41.25, hjust=0, label = "Allegany County has the most\nabandoned and unplugged\nwells in New York") +
   annotate("text", x = -80.3, y = 43.8, hjust=0, label = "Cattaraugus County has the most\nactive wells in New York") +
   theme_void() +
   labs(
-    title="Western New York is the region of interest for both<br><span style='color:#E3655B'>abandoned & unplugged</span> and <span style='color:#999999'>active</span> wells", 
-    subtitle="Documented abandoned & unplugged and active wells in New York",
+    title="Western New York is the region of interest for both<br><span style='color:#E3655B'>orphaned & unplugged</span> and <span style='color:#999999'>active</span> wells", 
+    subtitle="Documented orphaned & unplugged and active wells in New York",
     caption="Data from NY State Department of Environmental Conservation via NY Open Data\nGraphic by Ilena Peng") +
   plot_theme + theme (plot.title=element_markdown(face="bold", size=16), axis.text=element_blank(), axis.title.x=element_blank())
 
@@ -60,7 +56,7 @@ print(p_abdn)
 ggsave("map.png", width=9, height=6, unit="in")
 
 ### Bar chart
-abdn_active <- full_join(unplug_abdn, active_ct, by = c("county" = "County"))
+abdn_active <- full_join(unplug_orphaned, active_ct, by = c("county" = "County"))
 abdn_active = rename(abdn_active,c("abandon"="count","active"="Ct"))
 #replace NAs with 0
 abdn_active[is.na(abdn_active)] <- 0
@@ -69,10 +65,10 @@ abdn_active[is.na(abdn_active)] <- 0
 abdn_active$keep = ifelse(abdn_active$abandon >= 30, "yes", "no")
 #calculate means for each group so we know the "no" values
 abdn_active %>% group_by(keep) %>% summarise(abandon_avg = mean(abandon), active_avg = mean(active))
-# No: abandon average is 6.82, active average is 50.7
+# No: abandon average is 6.93, active average is 50.9
 for_plt <- abdn_active %>% filter(keep=="yes")
 #Add in our new averaged row
-for_plt <- for_plt %>% add_row(county = "Other counties", abandon = 6.82, active=50.7)
+for_plt <- for_plt %>% add_row(county = "Other counties", abandon = 6.93, active=50.9)
 
 #Gather data for stacked bar & drop keep column
 for_plt <- for_plt[ -c(4)]
@@ -86,11 +82,11 @@ p_abdnactive <- gather %>%
   ggplot(aes(y=county, x=count, fill=type)) +
   geom_bar(position="dodge", stat="identity") +
   scale_fill_manual(values=c("#DCDCDC", "#E3655B"), labels=c("Abandon","Active")) +
-  annotate("text", x = 2200, y = 10.75, hjust=0, label = "Allegany County now has more abandoned\nand unplugged wells than active ones") +
+  annotate("text", x = 2400, y = 10.75, hjust=0, label = "Allegany County now has more abandoned\nand unplugged wells than active ones") +
   annotate("text", x = 3700, y = 5.75, hjust=1, label = "Meanwhile, oil production has largely shifted\nto Chautauqua County, which has over 4,000\nactive wells and relatively few unplugged wells") +
   labs (
     title="<span style='color:#E3655B'>Unplugged</span> wells in Allegany County, former seat of New York oil<br>industry, now exceed number of <span style='color:#999999'>active</span> wells",
-    subtitle="Abandoned & unplugged and active wells in New York counties with more than 50 abandoned wells",
+    subtitle="Orphaned & unplugged and active wells in New York counties with 30 or more orphaned wells",
     caption="Data from NY State Department of Environmental Conservation via NY Open Data\nGraphic by Ilena Peng",
     x="Number of wells"
   ) +
@@ -99,17 +95,17 @@ p_abdnactive <- gather %>%
   theme(legend.position="none", plot.title=element_markdown(face="bold", size=16, lineheight = 1.2))
 
 print(p_abdnactive)
-ggsave("abdn_active.png", width=9, height=7, unit="in")
+ggsave("abdn_active.png", width=10, height=7, unit="in")
 
 ### Timespan chart
 #Ordered by mean, removed because decided to order by median: counties <- c("Allegany", "Cattaraugus", "Steuben", "Genesee", "Erie", "Chautauqua", "Wyoming")
 counties <- c("Cattaraugus", "Allegany",  "Genesee", "Steuben", "Erie", "Chautauqua", "Wyoming")
 
-plt_counties <- timespan %>% filter(County %in% counties)
+plt_counties <- timespan %>% filter(county %in% counties)
 
 p_timespan <- plt_counties %>%
-  mutate(County = fct_rev(factor(County, levels=counties))) %>% 
-  ggplot(aes(x=WellTime_Yr, y=County)) + 
+  mutate(county = fct_rev(factor(county, levels=counties))) %>% 
+  ggplot(aes(x=well_time_yr, y=county)) + 
   geom_point(color="#ED6A5A", alpha=0.2, size=3) +
   annotate(geom = "rect", ymin = Inf , ymax = 0, xmax = 30, xmin = -Inf, alpha = .05) +
   geom_vline(xintercept=30, colour="#DCDCDC", size=1) +
