@@ -4,6 +4,7 @@ library(extrafont)
 library(sf)
 library(tigris)
 library(ggtext)
+library(svglite)
 
 ### Loading data
 # Orphaned (unplugged)
@@ -43,7 +44,7 @@ p_abdn <-
   geom_sf(data=merge, fill="white", color="#DCDCDC") +
   geom_point(data=active, aes(x=surfacelongitude, y=surfacelatitude), alpha=0.1, size=0.05, color="#999999") +
   geom_point(data=orphaned, aes(x=`SURFACE LONGITUDE`, y=`SURFACE LATITUDE`), alpha=0.2, size=0.1, color="#E3655B") +
-  annotate("text", x = -78.5, y = 41.25, hjust=0, label = "Allegany County has the most\nabandoned and unplugged\nwells in New York") +
+  annotate("text", x = -78.5, y = 41.25, hjust=0, label = "Allegany County has the most\norphaned and unplugged\nwells in New York") +
   annotate("text", x = -80.3, y = 43.8, hjust=0, label = "Cattaraugus County has the most\nactive wells in New York") +
   theme_void() +
   labs(
@@ -53,7 +54,7 @@ p_abdn <-
   plot_theme + theme (plot.title=element_markdown(face="bold", size=16), axis.text=element_blank(), axis.title.x=element_blank())
 
 print(p_abdn)
-ggsave("map.png", width=9, height=6, unit="in")
+ggsave("map.svg", width=9, height=6, unit="in")
 
 ### Bar chart
 abdn_active <- full_join(unplug_orphaned, active_ct, by = c("county" = "County"))
@@ -82,7 +83,7 @@ p_abdnactive <- gather %>%
   ggplot(aes(y=county, x=count, fill=type)) +
   geom_bar(position="dodge", stat="identity") +
   scale_fill_manual(values=c("#DCDCDC", "#E3655B"), labels=c("Abandon","Active")) +
-  annotate("text", x = 2400, y = 10.75, hjust=0, label = "Allegany County now has more abandoned\nand unplugged wells than active ones") +
+  annotate("text", x = 2400, y = 10.75, hjust=0, label = "Allegany County now has more orphaned\nand unplugged wells than active ones") +
   annotate("text", x = 3700, y = 5.75, hjust=1, label = "Meanwhile, oil production has largely shifted\nto Chautauqua County, which has over 4,000\nactive wells and relatively few unplugged wells") +
   labs (
     title="<span style='color:#E3655B'>Unplugged</span> wells in Allegany County, former seat of New York oil<br>industry, now exceed number of <span style='color:#999999'>active</span> wells",
@@ -92,10 +93,10 @@ p_abdnactive <- gather %>%
   ) +
   theme_minimal() +
   plot_theme +
-  theme(legend.position="none", plot.title=element_markdown(face="bold", size=16, lineheight = 1.2))
+  theme(legend.position="none", plot.title=element_markdown(face="bold", size=16, lineheight = 1.2), panel.grid.major.y=element_blank())
 
 print(p_abdnactive)
-ggsave("abdn_active.png", width=10, height=7, unit="in")
+ggsave("abdn_active.svg", width=10, height=7, unit="in")
 
 ### Timespan chart
 #Ordered by mean, removed because decided to order by median: counties <- c("Allegany", "Cattaraugus", "Steuben", "Genesee", "Erie", "Chautauqua", "Wyoming")
@@ -117,7 +118,7 @@ p_timespan <- plt_counties %>%
     subtitle="Years between well completion and plugging in counties that had over 100 wells with recorded dates",
     caption="Data from NY State Department of Environmental Conservation via NY Open Data\nGraphic by Ilena Peng",
     x="Years"
-  ) + theme_minimal() + plot_theme
+  ) + theme_minimal() + plot_theme + theme(panel.grid.major.y=element_blank(), panel.grid.minor.x=element_blank())
 
 print(p_timespan)
-ggsave("timespan.png",  width=11, height=9, unit="in")
+ggsave("timespan.svg",  width=11, height=9, unit="in")
