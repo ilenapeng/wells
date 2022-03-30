@@ -34,7 +34,7 @@ plot_theme <- theme(
 ########### Map of abandoned and unplugged wells
 #Removing nulls now for plotting purposes - did not remove them in the counts because they were not marked as UM 
 orphaned <- orphaned %>% filter(!is.na(`SURFACE LONGITUDE`) & !is.na(`SURFACE LATITUDE`)) 
-active <- active %>% filter(!is.na(`Surface Longitude`) & !is.na(`Surface Latitude`)) 
+active <- active %>% filter(!is.na(`surfacelongitude`) & !is.na(`surfacelatitude`))
 #Merging wells data and shapefile
 ny <- counties("New York", cb = TRUE)
 merge <- ny %>% full_join(unplug_orphaned, by = c("NAME" = "county"))
