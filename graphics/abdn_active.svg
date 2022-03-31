@@ -4,165 +4,176 @@
 	 viewBox="0 0 720 504" style="enable-background:new 0 0 720 504;" xml:space="preserve">
 <style type="text/css">
 	.st0{fill:none;}
-	.st1{clip-path:url(#SVGID_4_);}
+	.st1{clip-path:url(#SVGID_2_);}
 	.st2{fill:none;stroke:#EBEBEB;stroke-width:0.53;stroke-linejoin:round;stroke-miterlimit:10;}
 	.st3{fill:none;stroke:#EBEBEB;stroke-width:1.07;stroke-linejoin:round;stroke-miterlimit:10;}
 	.st4{fill:#E3655B;}
 	.st5{fill:#DCDCDC;}
 	.st6{font-family:'ArialMT';}
 	.st7{font-size:11.04px;}
-	.st8{enable-background:new    ;}
-	.st9{clip-path:url(#SVGID_6_);}
-	.st10{font-family:'Helvetica';}
-	.st11{font-size:12px;}
-	.st12{letter-spacing:7;}
-	.st13{letter-spacing:4;}
-	.st14{font-family:'Helvetica-Bold';}
-	.st15{font-size:16px;}
-	.st16{letter-spacing:3;}
-	.st17{fill:#999999;}
-	.st18{font-size:8px;}
-	.st19{fill:none;stroke:#999999;}
+	.st8{clip-path:url(#SVGID_4_);}
+	.st9{font-family:'Helvetica';}
+	.st10{font-size:12px;}
+	.st11{letter-spacing:6;}
+	.st12{letter-spacing:3;}
+	.st13{font-family:'Helvetica-Bold';}
+	.st14{font-size:16px;}
+	.st15{fill:#999999;}
+	.st16{font-size:8px;}
+	.st17{fill:none;stroke:#999999;}
 </style>
 <rect class="st0" width="720" height="504"/>
 <g>
-	<defs>
-		<rect id="SVGID_1_" width="720" height="504"/>
-	</defs>
-	<clipPath id="SVGID_2_">
-		<use xlink:href="#SVGID_1_"  style="overflow:visible;"/>
-	</clipPath>
-</g>
-<g>
-	<defs>
-		<rect id="SVGID_3_" x="111.3" y="84.7" width="580.3" height="339.1"/>
-	</defs>
-	<clipPath id="SVGID_4_">
-		<use xlink:href="#SVGID_3_"  style="overflow:visible;"/>
-	</clipPath>
-	<g class="st1">
-		<line class="st2" x1="202.8" y1="423.8" x2="202.8" y2="84.7"/>
-		<line class="st2" x1="333" y1="423.8" x2="333" y2="84.7"/>
-		<line class="st2" x1="463.2" y1="423.8" x2="463.2" y2="84.7"/>
-		<line class="st2" x1="593.4" y1="423.8" x2="593.4" y2="84.7"/>
-		<line class="st3" x1="137.7" y1="423.8" x2="137.7" y2="84.7"/>
-		<line class="st3" x1="267.9" y1="423.8" x2="267.9" y2="84.7"/>
-		<line class="st3" x1="398.1" y1="423.8" x2="398.1" y2="84.7"/>
-		<line class="st3" x1="528.3" y1="423.8" x2="528.3" y2="84.7"/>
-		<line class="st3" x1="658.5" y1="423.8" x2="658.5" y2="84.7"/>
-		<rect x="137.7" y="89.2" class="st4" width="302.6" height="13.6"/>
-		<rect x="137.7" y="119.5" class="st4" width="141" height="13.6"/>
-		<rect x="137.7" y="149.8" class="st4" width="54.8" height="13.6"/>
-		<rect x="137.7" y="180.1" class="st4" width="32.3" height="13.6"/>
-		<rect x="137.7" y="210.3" class="st4" width="16.5" height="13.6"/>
-		<rect x="137.7" y="240.6" class="st4" width="14.3" height="13.6"/>
-		<rect x="137.7" y="270.9" class="st4" width="5.6" height="13.6"/>
-		<rect x="137.7" y="301.2" class="st4" width="4.7" height="13.6"/>
-		<rect x="137.7" y="361.7" class="st4" width="4.3" height="13.6"/>
-		<rect x="137.7" y="331.5" class="st4" width="3.9" height="13.6"/>
-		<rect x="137.7" y="392" class="st4" width="0.9" height="13.6"/>
-		<rect x="137.7" y="102.9" class="st5" width="157.8" height="13.6"/>
-		<rect x="137.7" y="133.1" class="st5" width="352.2" height="13.6"/>
-		<rect x="137.7" y="163.4" class="st5" width="50.5" height="13.6"/>
-		<rect x="137.7" y="193.7" class="st5" width="185.1" height="13.6"/>
-		<rect x="137.7" y="224" class="st5" width="527.6" height="13.6"/>
-		<rect x="137.7" y="254.2" class="st5" width="0.4" height="13.6"/>
-		<rect x="137.7" y="284.5" class="st5" width="8.1" height="13.6"/>
-		<rect x="137.7" y="314.8" class="st5" width="0" height="13.6"/>
-		<rect x="137.7" y="375.4" class="st5" width="0.3" height="13.6"/>
-		<rect x="137.7" y="345.1" class="st5" width="42.1" height="13.6"/>
-		<rect x="137.7" y="405.6" class="st5" width="6.6" height="13.6"/>
-		<text transform="matrix(1 0 0 1 450.18 106.44)" class="st6 st7">Allegany County now has more orphaned</text>
-		<text transform="matrix(1 0 0 1 450.18 122.33)" class="st6 st7">and unplugged wells than active ones</text>
-		<text transform="matrix(1 0 0 1 402.8124 249.88)" class="st6 st7">Meanwhile, oil production has largely shifted</text>
-		<rect x="399.3" y="256.3" class="st0" width="220.8" height="13.1"/>
-		<text transform="matrix(1 0 0 1 399.314 265.7705)" class="st8"><tspan x="0" y="0" class="st6 st7">to</tspan><tspan x="9.2" y="0" class="st6 st7"> </tspan><tspan x="12.2" y="0" class="st6 st7">Chautauqua</tspan><tspan x="72.4" y="0" class="st6 st7"> </tspan><tspan x="75.4" y="0" class="st6 st7">County,</tspan><tspan x="113.5" y="0" class="st6 st7"> </tspan><tspan x="116.5" y="0" class="st6 st7">which</tspan><tspan x="144.8" y="0" class="st6 st7"> </tspan><tspan x="147.8" y="0" class="st6 st7">has</tspan><tspan x="165.6" y="0" class="st6 st7"> </tspan><tspan x="168.6" y="0" class="st6 st7">over</tspan><tspan x="190.1" y="0" class="st6 st7"> </tspan><tspan x="193.1" y="0" class="st6 st7">4,000</tspan></text>
-		<text transform="matrix(1 0 0 1 392.3868 281.67)" class="st6 st7">active wells and relatively few unplugged wells</text>
-	</g>
-</g>
-<g>
-	<defs>
-		<rect id="SVGID_5_" width="720" height="504"/>
-	</defs>
-	<clipPath id="SVGID_6_">
-		<use xlink:href="#SVGID_5_"  style="overflow:visible;"/>
-	</clipPath>
-	<g class="st9">
-		<text transform="matrix(1 0 0 1 46.339 409.94)" class="st10 st11">Other counties</text>
-		<text transform="matrix(1 0 0 1 85.6847 379.66)" class="st10 st11">Oneida</text>
-		<rect x="74.5" y="339.1" class="st0" width="50" height="16.1"/>
-		<text transform="matrix(1 0 0 1 74.4756 349.3901)" class="st8"><tspan x="0" y="0" class="st10 st11 st12">Wyo</tspan><tspan x="46" y="0" class="st10 st11">-</tspan></text>
-		<rect x="73.7" y="308.8" class="st0" width="52" height="16.1"/>
-		<text transform="matrix(1 0 0 1 73.6963 319.1099)" class="st8"><tspan x="0" y="0" class="st10 st11 st13">Tomp</tspan><tspan x="48" y="0" class="st10 st11">-</tspan></text>
-		<text transform="matrix(1 0 0 1 85.0284 288.83)" class="st10 st11">Ontario</text>
-		<text transform="matrix(1 0 0 1 80.3585 258.55)" class="st10 st11">Oswego</text>
-		<rect x="59" y="218" class="st0" width="65.4" height="16.1"/>
-		<text transform="matrix(1 0 0 1 58.9893 228.2798)" class="st10 st11">Chautauqua</text>
-		<rect x="103" y="187.7" class="st0" width="21.3" height="16.1"/>
-		<text transform="matrix(1 0 0 1 103.04 198)" class="st10 st11">Erie</text>
-		<rect x="79.7" y="157.4" class="st0" width="44.7" height="16.1"/>
-		<text transform="matrix(1 0 0 1 79.6729 167.7202)" class="st10 st11">Steuben</text>
-		<rect x="59" y="127.1" class="st0" width="65.4" height="16.1"/>
-		<text transform="matrix(1 0 0 1 59.0068 137.4399)" class="st10 st11">Cattaraugus</text>
-		<text transform="matrix(1 0 0 1 78.3488 107.16)" class="st10 st11">Allegany</text>
-		<text transform="matrix(1 0 0 1 134.3531 437.35)" class="st10 st11">0</text>
-		<rect x="254.5" y="427" class="st0" width="26.7" height="16.1"/>
-		<text transform="matrix(1 0 0 1 254.5425 437.3496)" class="st10 st11">1000</text>
-		<rect x="384.8" y="427" class="st0" width="26.7" height="16.1"/>
-		<text transform="matrix(1 0 0 1 384.7524 437.3496)" class="st10 st11">2000</text>
-		<rect x="515" y="427" class="st0" width="26.7" height="16.1"/>
-		<text transform="matrix(1 0 0 1 514.9521 437.3496)" class="st10 st11">3000</text>
-		<rect x="645.2" y="427" class="st0" width="26.7" height="16.1"/>
-		<text transform="matrix(1 0 0 1 645.1523 437.3496)" class="st10 st11">4000</text>
-		<rect x="355.1" y="441.1" class="st0" width="92.7" height="16.1"/>
-		<text transform="matrix(1 0 0 1 355.1382 451.3701)" class="st14 st11">Number of wells</text>
-		<rect x="111.3" y="66.3" class="st0" width="498.3" height="16.1"/>
-		<text transform="matrix(1 0 0 1 111.3101 76.5601)" class="st10 st11">Orphaned &amp; unplugged and active wells in New York counties with 30 or more orphaned wells</text>
-		<text transform="matrix(1 0 0 1 111.31 39.86)" class="st4 st14 st15">Unplugged</text>
-		<text transform="matrix(1 0 0 1 199.27 39.86)" class="st14 st15">wells</text>
-		<text transform="matrix(1 0 0 1 242.85 39.86)" class="st14 st15">in</text>
-		<text transform="matrix(1 0 0 1 261.5 39.86)" class="st14 st15">Allegany</text>
-		<rect x="332.6" y="26.1" class="st0" width="59.5" height="21.5"/>
-		<text transform="matrix(1 0 0 1 332.6299 39.8599)" class="st8"><tspan x="0" y="0" class="st14 st15">Count</tspan><tspan x="50.6" y="0" class="st14 st15">y</tspan></text>
-		<rect x="396.6" y="26.1" class="st0" width="50.7" height="21.5"/>
-		<text transform="matrix(1 0 0 1 396.6001 39.8599)" class="st14 st15">former</text>
-		<rect x="451.7" y="26.1" class="st0" width="32" height="21.5"/>
-		<text transform="matrix(1 0 0 1 451.73 39.8599)" class="st14 st15">seat</text>
-		<text transform="matrix(1 0 0 1 488.2 39.86)" class="st14 st15">of</text>
-		<rect x="507.7" y="26.1" class="st0" width="32.9" height="21.5"/>
-		<text transform="matrix(1 0 0 1 507.7402 39.8599)" class="st14 st15">New</text>
-		<rect x="545.1" y="26.1" class="st0" width="35.6" height="21.5"/>
-		<text transform="matrix(1 0 0 1 545.0801 39.8599)" class="st14 st15">York</text>
-		<text transform="matrix(1 0 0 1 585.09 39.86)" class="st14 st15">oil</text>
-		<rect x="111.3" y="45.2" class="st0" width="67.6" height="21.5"/>
-		<text transform="matrix(1 0 0 1 111.3101 58.9902)" class="st8"><tspan x="0" y="0" class="st14 st15 st16">indus</tspan><tspan x="62.2" y="0" class="st14 st15">-</tspan></text>
-		<text transform="matrix(1 0 0 1 183.3 58.99)" class="st14 st15">now</text>
-		<rect x="219.7" y="45.2" class="st0" width="54.3" height="21.5"/>
-		<text transform="matrix(1 0 0 1 219.7402 58.9902)" class="st14 st15">exceed</text>
-		<text transform="matrix(1 0 0 1 278.45 58.99)" class="st14 st15">number</text>
-		<text transform="matrix(1 0 0 1 341.55 58.99)" class="st14 st15">of</text>
-		<rect x="361.1" y="45.2" class="st0" width="45.4" height="21.5"/>
-		<text transform="matrix(1 0 0 1 361.0898 58.9902)" class="st17 st14 st15">active</text>
-		<text transform="matrix(1 0 0 1 410.9 58.99)" class="st14 st15">wells</text>
-		<rect x="400.2" y="458.4" class="st0" width="291.8" height="10.7"/>
-		<text transform="matrix(1 0 0 1 400.2397 465.2402)" class="st10 st18">Data from NY State Department of Environmental Conservation via NY Open Data</text>
-		<rect x="612.5" y="467" class="st0" width="79.2" height="10.7"/>
-		<text transform="matrix(1 0 0 1 612.4897 473.8799)" class="st10 st18">Graphic by Ilena Peng</text>
-	</g>
-</g>
-<g>
 	<g>
-		<path class="st19" d="M626.5,261.8c0,0,7.9,3.8,15.6-2.1c2.7-2.1,4.5-8,5.5-12.5"/>
-		<g>
-			<polygon class="st17" points="651.2,249.1 648.7,241.5 643.4,247.5 			"/>
+		<defs>
+			<rect id="SVGID_1_" x="98.7" y="84.7" width="593" height="339.1"/>
+		</defs>
+		<clipPath id="SVGID_2_">
+			<use xlink:href="#SVGID_1_"  style="overflow:visible;"/>
+		</clipPath>
+		<g class="st1">
+			<line class="st2" x1="192.1" y1="423.8" x2="192.1" y2="84.7"/>
+			<line class="st2" x1="325.2" y1="423.8" x2="325.2" y2="84.7"/>
+			<line class="st2" x1="458.2" y1="423.8" x2="458.2" y2="84.7"/>
+			<line class="st2" x1="591.3" y1="423.8" x2="591.3" y2="84.7"/>
+			<line class="st3" x1="125.6" y1="423.8" x2="125.6" y2="84.7"/>
+			<line class="st3" x1="258.7" y1="423.8" x2="258.7" y2="84.7"/>
+			<line class="st3" x1="391.7" y1="423.8" x2="391.7" y2="84.7"/>
+			<line class="st3" x1="524.7" y1="423.8" x2="524.7" y2="84.7"/>
+			<line class="st3" x1="657.8" y1="423.8" x2="657.8" y2="84.7"/>
+			<rect x="125.6" y="89.7" class="st4" width="309.2" height="15"/>
+			<rect x="125.6" y="122.9" class="st4" width="144.1" height="15"/>
+			<rect x="125.6" y="156.2" class="st4" width="56" height="15"/>
+			<rect x="125.6" y="189.4" class="st4" width="33" height="15"/>
+			<rect x="125.6" y="222.7" class="st4" width="16.9" height="15"/>
+			<rect x="125.6" y="255.9" class="st4" width="14.6" height="15"/>
+			<rect x="125.6" y="289.2" class="st4" width="5.7" height="15"/>
+			<rect x="125.6" y="322.4" class="st4" width="4.8" height="15"/>
+			<rect x="125.6" y="388.9" class="st4" width="4.4" height="15"/>
+			<rect x="125.6" y="355.6" class="st4" width="4" height="15"/>
+			<rect x="125.6" y="104.6" class="st5" width="161.2" height="15"/>
+			<rect x="125.6" y="137.9" class="st5" width="359.9" height="15"/>
+			<rect x="125.6" y="171.1" class="st5" width="51.6" height="15"/>
+			<rect x="125.6" y="204.4" class="st5" width="189.2" height="15"/>
+			<rect x="125.6" y="237.6" class="st5" width="539.1" height="15"/>
+			<rect x="125.6" y="270.9" class="st5" width="0.4" height="15"/>
+			<rect x="125.6" y="304.1" class="st5" width="8.3" height="15"/>
+			<rect x="125.6" y="337.4" class="st5" width="0" height="15"/>
+			<rect x="125.6" y="403.9" class="st5" width="0.3" height="15"/>
+			<rect x="125.6" y="370.6" class="st5" width="43" height="15"/>
+			<text transform="matrix(1 0 0 1 444.92 108.96)" class="st6 st7">Allegany County now has more orphaned</text>
+			<text transform="matrix(1 0 0 1 444.92 124.86)" class="st6 st7">and unplugged wells than active ones</text>
+			<text transform="matrix(1 0 0 1 401.2423 267.24)" class="st6 st7">Meanwhile, oil production has largely shifted</text>
+			<rect x="397.7" y="273.7" class="st0" width="220.8" height="13.1"/>
+			<text transform="matrix(1 0 0 1 397.7437 283.1406)" class="st6 st7">to</text>
+			<text transform="matrix(1 0 0 1 406.9437 283.1406)" class="st6 st7"> </text>
+			<text transform="matrix(1 0 0 1 409.9437 283.1406)" class="st6 st7">Chautauqua</text>
+			<text transform="matrix(1 0 0 1 470.1437 283.1406)" class="st6 st7"> </text>
+			<text transform="matrix(1 0 0 1 473.1437 283.1406)" class="st6 st7">County,</text>
+			<text transform="matrix(1 0 0 1 511.2437 283.1406)" class="st6 st7"> </text>
+			<text transform="matrix(1 0 0 1 514.2437 283.1406)" class="st6 st7">which</text>
+			<text transform="matrix(1 0 0 1 542.5437 283.1406)" class="st6 st7"> </text>
+			<text transform="matrix(1 0 0 1 545.5437 283.1406)" class="st6 st7">has</text>
+			<text transform="matrix(1 0 0 1 563.3438 283.1406)" class="st6 st7"> </text>
+			<text transform="matrix(1 0 0 1 566.3438 283.1406)" class="st6 st7">over</text>
+			<text transform="matrix(1 0 0 1 587.8438 283.1406)" class="st6 st7"> </text>
+			<text transform="matrix(1 0 0 1 590.8438 283.1406)" class="st6 st7">4,000</text>
+			<text transform="matrix(1 0 0 1 390.8169 299.04)" class="st6 st7">active wells and relatively few unplugged wells</text>
 		</g>
 	</g>
 </g>
 <g>
 	<g>
-		<path class="st19" d="M520.7,125.7c0,0,2.1,7.7-10,12.6c-2.8,1.1-7.4,1.6-11.1,1.8"/>
+		<defs>
+			<rect id="SVGID_3_" width="720" height="504"/>
+		</defs>
+		<clipPath id="SVGID_4_">
+			<use xlink:href="#SVGID_3_"  style="overflow:visible;"/>
+		</clipPath>
+		<g class="st8">
+			<text transform="matrix(1 0 0 1 55.0447 408.16)" class="st9 st10">Oneida</text>
+			<rect x="43.8" y="364.6" class="st0" width="50" height="16.1"/>
+			<text transform="matrix(1 0 0 1 43.8359 374.9102)" class="st9 st10 st11">Wyo</text>
+			<text transform="matrix(1 0 0 1 89.8359 374.9102)" class="st9 st10">-</text>
+			<rect x="43.1" y="331.4" class="st0" width="52" height="16.1"/>
+			<text transform="matrix(1 0 0 1 43.0566 341.6699)" class="st9 st10 st12">Tomp</text>
+			<text transform="matrix(1 0 0 1 91.0566 341.6699)" class="st9 st10">-</text>
+			<text transform="matrix(1 0 0 1 54.3884 308.42)" class="st9 st10">Ontario</text>
+			<text transform="matrix(1 0 0 1 49.7185 275.18)" class="st9 st10">Oswego</text>
+			<rect x="28.3" y="231.6" class="st0" width="65.4" height="16.1"/>
+			<text transform="matrix(1 0 0 1 28.3496 241.9302)" class="st9 st10">Chautauqua</text>
+			<rect x="72.4" y="198.4" class="st0" width="21.3" height="16.1"/>
+			<text transform="matrix(1 0 0 1 72.4004 208.6802)" class="st9 st10">Erie</text>
+			<rect x="49" y="165.1" class="st0" width="44.7" height="16.1"/>
+			<text transform="matrix(1 0 0 1 49.0332 175.4399)" class="st9 st10">Steuben</text>
+			<rect x="28.4" y="131.9" class="st0" width="65.4" height="16.1"/>
+			<text transform="matrix(1 0 0 1 28.3672 142.1899)" class="st9 st10">Cattaraugus</text>
+			<text transform="matrix(1 0 0 1 47.7087 108.95)" class="st9 st10">Allegany</text>
+			<text transform="matrix(1 0 0 1 122.2931 437.35)" class="st9 st10">0</text>
+			<rect x="245.3" y="427" class="st0" width="26.7" height="16.1"/>
+			<text transform="matrix(1 0 0 1 245.3223 437.3496)" class="st9 st10">1000</text>
+			<rect x="378.4" y="427" class="st0" width="26.7" height="16.1"/>
+			<text transform="matrix(1 0 0 1 378.3623 437.3496)" class="st9 st10">2000</text>
+			<rect x="511.4" y="427" class="st0" width="26.7" height="16.1"/>
+			<text transform="matrix(1 0 0 1 511.3926 437.3496)" class="st9 st10">3000</text>
+			<rect x="644.4" y="427" class="st0" width="26.7" height="16.1"/>
+			<text transform="matrix(1 0 0 1 644.4326 437.3496)" class="st9 st10">4000</text>
+			<rect x="348.8" y="441.1" class="st0" width="92.7" height="16.1"/>
+			<text transform="matrix(1 0 0 1 348.8184 451.3701)" class="st13 st10">Number of wells</text>
+			<rect x="98.7" y="66.3" class="st0" width="498.3" height="16.1"/>
+			<text transform="matrix(1 0 0 1 98.6802 76.5601)" class="st9 st10">Orphaned &amp; unplugged and active wells in New York counties with 30 or more orphaned wells</text>
+			<text transform="matrix(1 0 0 1 98.68 39.86)" class="st4 st13 st14">Unplugged</text>
+			<text transform="matrix(1 0 0 1 186.64 39.86)" class="st13 st14">wells</text>
+			<text transform="matrix(1 0 0 1 230.21 39.86)" class="st13 st14">in</text>
+			<text transform="matrix(1 0 0 1 248.87 39.86)" class="st13 st14">Allegany</text>
+			<rect x="320" y="26.1" class="st0" width="59.5" height="21.5"/>
+			<text transform="matrix(1 0 0 1 319.9902 39.8599)" class="st13 st14">Count</text>
+			<text transform="matrix(1 0 0 1 366.5902 39.8599)" class="st13 st14">y</text>
+			<rect x="384" y="26.1" class="st0" width="50.7" height="21.5"/>
+			<text transform="matrix(1 0 0 1 379.9702 39.8599)" class="st13 st14">former</text>
+			<rect x="439.1" y="26.1" class="st0" width="32" height="21.5"/>
+			<text transform="matrix(1 0 0 1 435.0898 39.8599)" class="st13 st14">seat</text>
+			<text transform="matrix(1 0 0 1 471.56 39.86)" class="st13 st14">of</text>
+			<rect x="495.1" y="26.1" class="st0" width="32.9" height="21.5"/>
+			<text transform="matrix(1 0 0 1 491.1001 39.8599)" class="st13 st14">New</text>
+			<rect x="532.5" y="26.1" class="st0" width="35.6" height="21.5"/>
+			<text transform="matrix(1 0 0 1 528.4502 39.8599)" class="st13 st14">York</text>
+			<text transform="matrix(1 0 0 1 568.46 39.86)" class="st13 st14">oil</text>
+			<rect x="98.7" y="45.2" class="st0" width="67.6" height="21.5"/>
+			<text transform="matrix(1 0 0 1 98.6802 58.9902)" class="st13 st14">industry</text>
+			<text transform="matrix(1 0 0 1 165.67 58.99)" class="st13 st14">now</text>
+			<rect x="207.1" y="45.2" class="st0" width="54.3" height="21.5"/>
+			<text transform="matrix(1 0 0 1 202.1001 58.9902)" class="st13 st14">exceed</text>
+			<text transform="matrix(1 0 0 1 260.81 58.99)" class="st13 st14">number</text>
+			<text transform="matrix(1 0 0 1 323.92 58.99)" class="st13 st14">of</text>
+			<rect x="348.5" y="45.2" class="st0" width="45.4" height="21.5"/>
+			<text transform="matrix(1 0 0 1 343.46 58.9902)" class="st15 st13 st14">active</text>
+			<text transform="matrix(1 0 0 1 393.27 58.99)" class="st13 st14">wells</text>
+			<rect x="400.2" y="458.4" class="st0" width="291.8" height="10.7"/>
+			<text transform="matrix(1 0 0 1 400.2397 465.2402)" class="st9 st16">Data from NY State Department of Environmental Conservation via NY Open Data</text>
+			<rect x="612.5" y="467" class="st0" width="79.2" height="10.7"/>
+			<text transform="matrix(1 0 0 1 612.4897 473.8799)" class="st9 st16">Graphic by Ilena Peng</text>
+		</g>
+	</g>
+</g>
+<g>
+	<g>
+		<path class="st17" d="M620.9,279.3c0,0,7.9,3.8,15.6-2.1c2.7-2.1,4.5-8,5.5-12.5"/>
 		<g>
-			<polygon class="st17" points="500.6,136.2 493.8,140.4 500.8,144.1 			"/>
+			<polygon class="st15" points="645.6,266.6 643.1,259 637.8,265 			"/>
+		</g>
+	</g>
+</g>
+<g>
+	<g>
+		<path class="st17" d="M444.4,115.5"/>
+	</g>
+</g>
+<g>
+	<g>
+		<path class="st17" d="M442.7,114.2c0,0-9,4.3-15.5-2.1"/>
+		<g>
+			<polygon class="st15" points="431.3,110.6 424,107.3 424.9,115.3 			"/>
 		</g>
 	</g>
 </g>

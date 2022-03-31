@@ -64,12 +64,14 @@ abdn_active[is.na(abdn_active)] <- 0
 ## Creating "Other counties" designation
 #variable for keep or not
 abdn_active$keep = ifelse(abdn_active$abandon >= 30, "yes", "no")
-#calculate means for each group so we know the "no" values
-abdn_active %>% group_by(keep) %>% summarise(abandon_avg = mean(abandon), active_avg = mean(active))
-# No: abandon average is 6.93, active average is 50.9
+
+### COMMENT OUT - this is for creating 'Other Counties' bar
+## calculate means for each group so we know the "no" values
+# abdn_active %>% group_by(keep) %>% summarise(abandon_avg = mean(abandon), active_avg = mean(active))
+## No: abandon average is 6.93, active average is 50.9
 for_plt <- abdn_active %>% filter(keep=="yes")
-#Add in our new averaged row
-for_plt <- for_plt %>% add_row(county = "Other counties", abandon = 6.93, active=50.9)
+## Add in our new averaged row
+# for_plt <- for_plt %>% add_row(county = "Other counties", abandon = 6.93, active=50.9)
 
 #Gather data for stacked bar & drop keep column
 for_plt <- for_plt[ -c(4)]
@@ -83,8 +85,8 @@ p_abdnactive <- gather %>%
   ggplot(aes(y=county, x=count, fill=type)) +
   geom_bar(position="dodge", stat="identity") +
   scale_fill_manual(values=c("#DCDCDC", "#E3655B"), labels=c("Abandon","Active")) +
-  annotate("text", x = 2400, y = 10.75, hjust=0, label = "Allegany County now has more orphaned\nand unplugged wells than active ones") +
-  annotate("text", x = 3700, y = 5.75, hjust=1, label = "Meanwhile, oil production has largely shifted\nto Chautauqua County, which has over 4,000\nactive wells and relatively few unplugged wells") +
+  annotate("text", x = 2400, y = 9.75, hjust=0, label = "Allegany County now has more orphaned\nand unplugged wells than active ones") +
+  annotate("text", x = 3700, y = 4.75, hjust=1, label = "Meanwhile, oil production has largely shifted\nto Chautauqua County, which has over 4,000\nactive wells and relatively few unplugged wells") +
   labs (
     title="<span style='color:#E3655B'>Unplugged</span> wells in Allegany County, former seat of New York oil<br>industry, now exceed number of <span style='color:#999999'>active</span> wells",
     subtitle="Orphaned & unplugged and active wells in New York counties with 30 or more orphaned wells",
@@ -115,7 +117,7 @@ p_timespan <- plt_counties %>%
   stat_summary(fun="median", geom="point", shape=124, size=8, color="#B82714") +
   labs(
     title="Most of NY's plugged wells were plugged 20 to 30 years after their initial completion, in\nline with a well's recommended lifespan, but some have remained unplugged much longer",
-    subtitle="Years between well completion and plugging in counties that had over 100 wells with recorded dates",
+    subtitle="Years between well completion and plugging in counties that had over 50 wells with recorded dates",
     caption="Data from NY State Department of Environmental Conservation via NY Open Data\nGraphic by Ilena Peng",
     x="Years"
   ) + theme_minimal() + plot_theme + theme(panel.grid.major.y=element_blank(), panel.grid.minor.x=element_blank())
