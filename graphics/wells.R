@@ -85,8 +85,8 @@ p_abdnactive <- gather %>%
   ggplot(aes(y=county, x=count, fill=type)) +
   geom_bar(position="dodge", stat="identity") +
   scale_fill_manual(values=c("#DCDCDC", "#E3655B"), labels=c("Abandon","Active")) +
-  annotate("text", x = 2400, y = 9.75, hjust=0, label = "Allegany County now has more orphaned\nand unplugged wells than active ones") +
-  annotate("text", x = 3700, y = 4.75, hjust=1, label = "Meanwhile, oil production has largely shifted\nto Chautauqua County, which has over 4,000\nactive wells and relatively few unplugged wells") +
+  annotate("text", x = 2400, y = 9, hjust=0, label = "Allegany County now has more orphaned\nand unplugged wells than active ones") +
+  annotate("text", x = 3700, y = 6, hjust=1, label = "Meanwhile, oil production has largely shifted\nto Chautauqua County, which has over 4,000\nactive wells and relatively few unplugged wells") +
   labs (
     title="<span style='color:#E3655B'>Unplugged</span> wells in Allegany County, former seat of New York oil<br>industry, now exceed number of <span style='color:#999999'>active</span> wells",
     subtitle="Orphaned & unplugged and active wells in New York counties with 30 or more orphaned wells",
