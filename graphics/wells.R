@@ -8,7 +8,7 @@ library(svglite)
 
 ### Loading data
 # Orphaned (unplugged)
-orphaned <- read_csv('https://raw.githubusercontent.com/ilenapeng/wells/main/data_5_4_22/Oil__Gas____Other_Regulated_Wells__Beginning_1860.csv')
+orphaned <- read_csv('https://raw.githubusercontent.com/ilenapeng/wells/main/data_5_4_22/data_processed_5422/wells_orphaned_5422.csv')
 # Orphaned, by county & drop index column
 unplug_orphaned <- read_csv('https://raw.githubusercontent.com/ilenapeng/wells/main/data_5_4_22/data_processed_5422/unplug_orphaned_5422.csv')
 # All active wells
@@ -33,7 +33,7 @@ plot_theme <- theme(
 
 ########### Map of abandoned and unplugged wells
 #Removing nulls now for plotting purposes - did not remove them in the counts because they were not marked as UM 
-orphaned <- orphaned %>% filter(!is.na(`Surface Longitude`) & !is.na(`Surface Latitude`)) 
+orphaned <- orphaned %>% filter(!is.na(`surface_longitude`) & !is.na(`surface_latitude`)) 
 active <- active %>% filter(!is.na(`surfacelongitude`) & !is.na(`surfacelatitude`))
 #Merging wells data and shapefile
 ny <- counties("New York", cb = TRUE)
@@ -43,7 +43,7 @@ p_abdn <-
   ggplot() +
   geom_sf(data=merge, fill="white", color="#DCDCDC") +
   geom_point(data=active, aes(x=surfacelongitude, y=surfacelatitude), alpha=0.1, size=0.05, color="#999999") +
-  geom_point(data=orphaned, aes(x=`Surface Longitude`, y=`Surface Latitude`), alpha=0.2, size=0.1, color="#E3655B") +
+  geom_point(data=orphaned, aes(x=`surface_longitude`, y=`surface_latitude`), alpha=0.2, size=0.1, color="#E3655B") +
   annotate("text", x = -78.5, y = 41.25, hjust=0, label = "Allegany County has the most\norphaned and unplugged\nwells in New York") +
   annotate("text", x = -80.3, y = 43.8, hjust=0, label = "Cattaraugus County has the most\nactive wells in New York") +
   theme_void() +
