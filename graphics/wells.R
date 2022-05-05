@@ -55,6 +55,7 @@ p_abdn <-
 
 print(p_abdn)
 ggsave("map.svg", width=9, height=6, unit="in")
+ggsave("map.png", width=9, height=6, unit="in")
 
 ### Bar chart
 abdn_active <- full_join(unplug_orphaned, active_ct, by = c("county" = "County"))
