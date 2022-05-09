@@ -41,19 +41,24 @@ merge <- ny %>% full_join(unplug_orphaned, by = c("NAME" = "county"))
 
 p_abdn <-
   ggplot() +
-  geom_sf(data=merge, fill="white", color="#DCDCDC") +
-  geom_point(data=active, aes(x=surfacelongitude, y=surfacelatitude), alpha=0.1, size=0.05, color="#999999") +
-  geom_point(data=orphaned, aes(x=`surface_longitude`, y=`surface_latitude`), alpha=0.2, size=0.1, color="#E3655B") +
-  annotate("text", x = -78.5, y = 41.25, hjust=0, label = "Allegany County has the most\norphaned and unplugged\nwells in New York") +
-  annotate("text", x = -80.3, y = 43.8, hjust=0, label = "Chautauqua County has the most\nactive wells in New York") +
+  geom_sf(data=merge, fill="white", color="#A3B8B8") +
+# Comment out the above line and then uncomment this line if exporting just points:
+#  geom_sf(data=merge, fill="white", color="white", alpha=0) +
+  geom_point(data=active, aes(x=surfacelongitude, y=surfacelatitude),  size=0.1,  color="#999999", alpha=0.2) +
+  geom_point(data=orphaned, aes(x=`surface_longitude`, y=`surface_latitude`),  size=0.1, color="#E3655B", alpha=0.2) +
+#  annotate("text", x = -78.5, y = 41.25, hjust=0, label = "Allegany County has the most\norphaned and unplugged\nwells in New York") +
+#  annotate("text", x = -80.3, y = 43.8, hjust=0, label = "Chautauqua County has the most\nactive wells in New York") +
   theme_void() +
-  labs(
-    title="Western New York is the region of interest for both<br><span style='color:#E3655B'>orphaned & unplugged</span> and <span style='color:#999999'>active</span> wells", 
-    subtitle="Unplugged orphaned wells with locations verified by the DEC and reported\nby outside parties, and active wells",
-    caption="Data from NY State Department of Environmental Conservation via NY Open Data\nGraphic by Ilena Peng") +
+#  labs(
+#    title="Western New York is the region of interest for both<br><span style='color:#E3655B'>orphaned & unplugged</span> and <span style='color:#999999'>active</span> wells", 
+#    subtitle="Unplugged orphaned wells with locations verified by the DEC and reported\nby outside parties, and active wells",
+#    caption="Data from NY State Department of Environmental Conservation via NY Open Data\nGraphic by Ilena Peng") +
   plot_theme + theme (plot.title=element_markdown(face="bold", size=16), axis.text=element_blank(), axis.title.x=element_blank())
 
 print(p_abdn)
+# ggsave("base.svg", width=9, height=6, unit="in")
+# ggsave("points.svg", width=9, height=6, unit="in")
+
 ggsave("map.svg", width=9, height=6, unit="in")
 ggsave("map.png", width=9, height=6, unit="in")
 
