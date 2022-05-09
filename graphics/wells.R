@@ -46,16 +46,18 @@ p_abdn <-
 #  geom_sf(data=merge, fill="white", color="white", alpha=0) +
   geom_point(data=active, aes(x=surfacelongitude, y=surfacelatitude),  size=0.1,  color="#999999", alpha=0.2) +
   geom_point(data=orphaned, aes(x=`surface_longitude`, y=`surface_latitude`),  size=0.1, color="#E3655B", alpha=0.2) +
-#  annotate("text", x = -78.5, y = 41.25, hjust=0, label = "Allegany County has the most\norphaned and unplugged\nwells in New York") +
-#  annotate("text", x = -80.3, y = 43.8, hjust=0, label = "Chautauqua County has the most\nactive wells in New York") +
+  annotate("text", x = -78.5, y = 41.25, hjust=0, label = "Allegany County has the most\norphaned and unplugged\nwells in New York") +
+  annotate("text", x = -80.3, y = 43.8, hjust=0, label = "Chautauqua County has the most\nactive wells in New York") +
   theme_void() +
-#  labs(
-#    title="Western New York is the region of interest for both<br><span style='color:#E3655B'>orphaned & unplugged</span> and <span style='color:#999999'>active</span> wells", 
-#    subtitle="Unplugged orphaned wells with locations verified by the DEC and reported\nby outside parties, and active wells",
-#    caption="Data from NY State Department of Environmental Conservation via NY Open Data\nGraphic by Ilena Peng") +
-  plot_theme + theme (plot.title=element_markdown(face="bold", size=16), axis.text=element_blank(), axis.title.x=element_blank())
+  labs(
+    title="Western New York is the region of interest for both<br><span style='color:#E3655B'>orphaned & unplugged</span> and <span style='color:#999999'>active</span> wells", 
+    subtitle="Unplugged orphaned wells with locations verified by the DEC and reported\nby outside parties, and active wells",
+    caption="Data from NY State Department of Environmental Conservation via NY Open Data\nGraphic by Ilena Peng") +
+  plot_theme + theme (plot.title=element_markdown(face="bold", size=16), axis.text=element_blank(), axis.title.x=element_blank(), plot.background=element_rect(fill="white"))
 
 print(p_abdn)
+ggsave("map.png", width=9, height=6, unit="in")
+
 # ggsave("base.svg", width=9, height=6, unit="in")
 # ggsave("points.svg", width=9, height=6, unit="in")
 
@@ -105,6 +107,7 @@ p_abdnactive <- gather %>%
 
 print(p_abdnactive)
 ggsave("abdn_active.svg", width=10, height=7, unit="in")
+ggsave("abdn_active.png", width=10, height=7, unit="in")
 
 ### Timespan chart
 #Ordered by mean, removed because decided to order by median: counties <- c("Allegany", "Cattaraugus", "Steuben", "Genesee", "Erie", "Chautauqua", "Wyoming")
@@ -130,3 +133,5 @@ p_timespan <- plt_counties %>%
 
 print(p_timespan)
 ggsave("timespan.svg",  width=11, height=9, unit="in")
+ggsave("timespan.png",  width=11, height=9, unit="in")
+
